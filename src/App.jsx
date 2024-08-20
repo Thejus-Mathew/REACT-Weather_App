@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import { useEffect } from 'react';
+import clearSky from './Images/clearSky.jpg';
 
 function App() {
 
@@ -138,11 +139,11 @@ function App() {
   const [weatherData, setWeatherData] = useState(demo);
 
   
-  const [background, setBackground] = useState('./src/Images/clearSky.jpg');
+  const [background, setBackground] = useState(clearSky);
 
   useEffect(() => {
     if (weatherData.weather[0].id === 800) {
-      setBackground('./src/Images/clearSky.jpg');
+      setBackground(clearSky);
     }
      else if (weatherData.weather[0].id < 900 && weatherData.weather[0].id >800) {
       setBackground('./src/Images/fullCloud.jpg');
