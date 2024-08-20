@@ -2,6 +2,13 @@ import { useState } from 'react';
 import './App.css'
 import { useEffect } from 'react';
 import clearSky from './Images/clearSky.jpg';
+import fullCloud from './Images/fullCloud.jpg';
+import mist from './Images/mist.jpg';
+import rain from './Images/rain.avif';
+import shower from './Images/shower.jpg';
+import snow from './Images/snow.jpg';
+import thunder from './Images/thunder.webp';
+
 
 function App() {
 
@@ -146,22 +153,22 @@ function App() {
       setBackground(clearSky);
     }
      else if (weatherData.weather[0].id < 900 && weatherData.weather[0].id >800) {
-      setBackground('./src/Images/fullCloud.jpg');
+      setBackground(fullCloud);
     }
      else if (weatherData.weather[0].id < 600 && weatherData.weather[0].id >499) {
-      setBackground('./src/Images/rain.avif');
+      setBackground(rain);
     }
      else if (weatherData.weather[0].id < 400 && weatherData.weather[0].id > 299) {
-      setBackground('./src/Images/shower.jpg');
+      setBackground(shower);
     }
      else if (weatherData.weather[0].id < 700 && weatherData.weather[0].id > 599) {
-      setBackground('./src/Images/snow.jpg');
+      setBackground(snow);
     }
      else if (weatherData.weather[0].id < 800 && weatherData.weather[0].id > 699) {
-      setBackground('./src/Images/mist.jpg');
+      setBackground(mist);
     }
      else if (weatherData.weather[0].id < 300 && weatherData.weather[0].id > 199) {
-      setBackground('./src/Images/thunder.webp');
+      setBackground(thunder);
     }
   }, [weatherData]);
 
